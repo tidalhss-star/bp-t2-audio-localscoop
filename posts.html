@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>글 목록 · t2-audio-localscoop</title>
+  <meta name="description" content="t2-audio-localscoop에 올라온 글 목록입니다.">
+  <link rel="canonical" href="https://audio.localscoop.online/posts.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+        /* CSS Design System - Retro Neo-Brut (v6) with Clip Grid Elements */
+        :root {
+            --bg: #f4f0ec;
+            --primary: #ff5f00;
+            --secondary: #00f0ff;
+            --accent: #ffff00;
+            --dark: #000000;
+            --light: #ffffff;
+            --border-width: 4px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Pretendard', -apple-system, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--dark);
+            padding: 2rem;
+            line-height: 1.6;
+        }
+
+        /* Semantic Hidden Elements */
+        .t-hero-9diz-only {
+            display: none;
+        }
+
+        /* Layout Grid */
+        .grid-container {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        /* Navigation Bar (Neo-Brutalist Card) */
+        .r-nav-36on {
+            background: var(--light);
+            border: var(--border-width) solid var(--dark);
+            padding: 2rem;
+            box-shadow: 8px 8px 0px var(--dark);
+            height: fit-content;
+        }
+
+        .r-nav-36on h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            border-bottom: var(--border-width) solid var(--dark);
+            padding-bottom: 0.5rem;
+        }
+
+        .r-nav-36on ul {
+            list-style: none;
+        }
+
+        .r-nav-36on li {
+            margin-bottom: 1rem;
+        }
+
+        .r-nav-36on a {
+            color: var(--dark);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            display: block;
+            padding: 0.5rem;
+            border: 2px solid transparent;
+            transition: all 0.2s ease;
+        }
+
+        .r-nav-36on a:hover {
+            background: var(--primary);
+            color: var(--light);
+            border-color: var(--dark);
+            transform: translate(-4px, -4px);
+            box-shadow: 4px 4px 0px var(--dark);
+        }
+
+        /* Main Content Wrap */
+        .m-main-qhxr-wrap {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        /* Header Card */
+        .v-ico-6lwe {
+            background: var(--primary);
+            color: var(--light);
+            border: var(--border-width) solid var(--dark);
+            padding: 3rem 2rem;
+            box-shadow: 12px 12px 0px var(--dark);
+        }
+
+        .v-ico-6lwe h1 {
+            font-size: 3rem;
+            font-weight: 900;
+            line-height: 1.2;
+            word-break: keep-all;
+        }
+
+        .v-ico-6lwe p {
+            margin-top: 1rem;
+            font-size: 1.2rem;
+            background: var(--dark);
+            color: var(--light);
+            display: inline-block;
+            padding: 0.3rem 0.8rem;
+        }
+
+        /* Content Blocks */
+        .content-card {
+            background: var(--light);
+            border: var(--border-width) solid var(--dark);
+            padding: 2.5rem;
+            box-shadow: 8px 8px 0px var(--dark);
+        }
+
+        .content-card h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            background: var(--secondary);
+            display: inline-block;
+            padding: 0.2rem 1rem;
+            border: var(--border-width) solid var(--dark);
+            transform: rotate(-1deg);
+        }
+
+        .content-card h3 {
+            font-size: 1.4rem;
+            margin: 1.5rem 0 0.8rem 0;
+            border-bottom: 2px dashed var(--dark);
+            padding-bottom: 0.3rem;
+        }
+
+        .content-card p {
+            font-size: 1.1rem;
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        /* Specification Table */
+        .spec-table-container {
+            margin: 2rem 0;
+            overflow-x: auto;
+        }
+
+        .spec-table {
+            width: 100%;
+            border-collapse: collapse;
+            border: var(--border-width) solid var(--dark);
+            background: var(--light);
+        }
+
+        .spec-table th, .spec-table td {
+            border: 2px solid var(--dark);
+            padding: 1rem;
+            text-align: left;
+            font-size: 1rem;
+        }
+
+        .spec-table th {
+            background: var(--accent);
+            font-weight: bold;
+        }
+
+        .spec-table tr:nth-child(even) {
+            background: #fafafa;
+        }
+
+        /* Alert Box */
+        .danger-zone {
+            background: #ffcccc;
+            border: var(--border-width) solid var(--dark);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            box-shadow: 6px 6px 0px var(--dark);
+        }
+
+        .danger-zone h4 {
+            font-size: 1.2rem;
+            color: #d00000;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: var(--light);
+            padding: 2rem;
+            text-align: center;
+            border: var(--border-width) solid var(--dark);
+            margin-top: 4rem;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+            .v-ico-6lwe h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+  <meta property="og:title" content="글 목록 · t2-audio-localscoop">
+  <meta property="og:description" content="t2-audio-localscoop에 올라온 글 목록입니다.">
+  <meta property="og:url" content="https://audio.localscoop.online/posts.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+</head>
+<body>
+  <div class="container">
+    <header class="v-ico-6lwe">
+                <p>전문가용 오디오 규격 분석 리포트</p>
+                <h1>이어폰 단자 규격 정리: 3.5mm, 2.5mm, 4.4mm 물리적 접점과 전기적 신호의 진실</h1>
+            </header>
+    <main>
+      <h1>글 목록</h1>
+      <p>전체 2개</p>
+      <ul class="post-list">
+      <li class="post-item">
+        <a class="post-item__link" href="posts/25-to-44-변환-어댑터.html">2.5 to 4.4 어댑터 선택 시 회로 손상을 피하는 물리적 규칙</a>
+        <p class="post-item__summary">2.5밀리미터 밸런스드 단자를 4.4밀리미터 단자로 변환하려는 시도는 대부분 과거에 유행하던 소형 고음질 재생기의 케이블을 최신 규격의 음향 기기에 재활용하려는 목적에서 출발한다. 물리적으로 플러그</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/DAC-동글-C타입.html">C타입 동글 덱 선택 시 실패하지 않는 규격과 호환성 기준</a>
+        <p class="post-item__summary">C타입 단자가 달린 기기에 유선 이어폰을 쓰려고 아무 어댑터나 사면 대개 돈을 날린다. 시중의 동글은 단순 도선 연결선인 패시브 방식과 내부에 디지털-아날로그 변환기인 덱 칩셋을 탑재한 액티브 방식</p>
+      </li>
+      </ul>
+
+    </main>
+  </div>
+</body>
+</html>

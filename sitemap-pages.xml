@@ -11,6 +11,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://audio.localscoop.online/contact.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://audio.localscoop.online/digest.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>

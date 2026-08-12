@@ -1,20 +1,403 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>이어폰 단자 규격 정리 — 핵심 요약 및 기술적 판단 기준</title>
-    <meta name="description" content="3.5mm, 2.5mm, 4.4mm 단자의 전기적 특성과 물리적 구조를 분석합니다. 밸런스드 출력이 필요한 이유와 젠더 사용 시 발생하는 물리적 임피던스 변화를 데이터 중심으로 설명합니다.">
-    <meta name="keywords" content="이어폰 단자, 3.5mm, 2.5mm, 4.4mm, 밸런스드 출력, 오디오 젠더, 임피던스, 신호 전송">
-    <link rel="canonical" href="https://audio.localscoop.online/digest.html">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>이어폰 단자 규격 정리 — 핵심 요약 및 기술적 판단 기준</title>
+  <meta name="description" content="3.5mm, 2.5mm, 4.4mm 단자의 전기적 특성과 물리적 구조를 분석합니다. 밸런스드 출력이 필요한 이유와 젠더 사용 시 발생하는 물리적 임피던스 변화를 데이터 중심으로 설명합니다.">
+  <link rel="canonical" href="https://audio.localscoop.online/digest.html">
   <meta property="og:url" content="https://audio.localscoop.online/digest.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+        /* CSS Design System - Retro Neo-Brut (v6) with Clip Grid Elements */
+        :root {
+            --primary: #1b1a17;       /* Ink Black */
+            --secondary: #f4f1ea;     /* Warm Paper Tone */
+            --accent: #1bdebe;        /* Neon Teal */
+            --card-bg: #ffffff;       /* Pure Paper White */
+            --font-sans: ui-sans-serif, Pretendard, -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-serif: Georgia, "Nanum Myeongjo", Batang, serif;
+            --font-mono: "SFMono-Regular", Consolas, Menlo, monospace;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--secondary);
+            color: var(--primary);
+            font-family: var(--font-sans);
+            line-height: 1.7;
+            padding: 48px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 24px;
+            }
+        }
+
+        /* Semantic Hidden Elements */
+        .t-hero-9diz-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        /* Masthead (No Hero, No Nav standard) */
+        .v-ico-6lwe {
+            margin-bottom: 80px;
+            border-bottom: 2px dashed var(--primary);
+            padding-bottom: 32px;
+            position: relative;
+        }
+
+        .m-main-qhxr-wrap {
+            transform: rotate(-1.2deg);
+            display: inline-block;
+            margin-bottom: 16px;
+            background-color: var(--accent);
+            padding: 8px 16px;
+            border: 2px solid var(--primary);
+            border-radius: 24px;
+        }
+
+        .r-nav-36on-title {
+            font-family: var(--font-serif);
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: var(--primary);
+            line-height: 1.2;
+        }
+
+        .r-nav-36on-definition {
+            font-size: 1.1rem;
+            font-family: var(--font-mono);
+            color: var(--primary);
+            margin-top: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .n-list-5vgq-row {
+            margin-top: 24px;
+            font-size: 0.85rem;
+            font-family: var(--font-mono);
+            color: #666;
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        /* Navigation (Structural Entropy - randomized ordering via flex order) */
+        .n-grid-dms3-container {
+            margin-bottom: 48px;
+        }
+
+        .n-grid-dms3-list {
+            display: flex;
+            list-style: none;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .n-grid-dms3-item a {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: bold;
+            font-size: 0.9rem;
+            padding: 6px 12px;
+            border: 1px solid var(--primary);
+            border-radius: 24px;
+            background-color: var(--card-bg);
+            transition: all 0.2s ease;
+        }
+
+        .n-grid-dms3-item a:hover {
+            background-color: var(--accent);
+        }
+
+        /* Main Content Grid */
+        .r-head-6kyh {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(19rem, 1fr));
+            gap: 32px;
+            margin-bottom: 80px;
+        }
+
+        @media (max-width: 768px) {
+            .r-head-6kyh {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+        }
+
+        /* Card Styles with Retro Neo-Brut & Clip Grid Twist */
+        .v-txt-kbf0 {
+            background-color: var(--card-bg);
+            border: 2px solid var(--primary);
+            border-radius: 24px;
+            padding: 32px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        /* Intentional misalignment for indie feel */
+        .v-txt-kbf0:nth-child(even) {
+            transform: rotate(0.8deg);
+        }
+        .v-txt-kbf0:nth-child(3n) {
+            transform: rotate(-0.5deg);
+        }
+
+        /* Pull-quote card (Every 5th card styling) */
+        .v-txt-kbf0.n-item-9s6i-quote {
+            background-color: var(--accent);
+            grid-column: span 1;
+            transform: rotate(-1deg) scale(1.02);
+        }
+
+        .v-txt-kbf0-tag {
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            background-color: var(--primary);
+            color: var(--secondary);
+            padding: 4px 10px;
+            border-radius: 24px;
+            align-self: flex-start;
+            margin-bottom: 16px;
+        }
+
+        .v-txt-kbf0-title {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 16px;
+            line-height: 1.3;
+        }
+
+        .v-txt-kbf0-desc {
+            font-size: 0.95rem;
+            color: #333;
+            margin-bottom: 24px;
+        }
+
+        /* Narrative Section (Transition from Grid to 1-Column Narrative) */
+        .r-main-0msd-section {
+            border-top: 2px dashed var(--primary);
+            padding-top: 60px;
+            margin-bottom: 80px;
+        }
+
+        .r-main-0msd-title {
+            font-family: var(--font-serif);
+            font-size: 2rem;
+            margin-bottom: 32px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .r-main-0msd-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 100%;
+            height: 4px;
+            background: var(--accent);
+            z-index: -1;
+        }
+
+        .r-main-0msd-content {
+            max-width: 800px;
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        .r-main-0msd-content p {
+            margin-bottom: 24px;
+        }
+
+        /* Comparison Table / Guide */
+        .q-txt-nwkz-container {
+            margin: 40px 0;
+            overflow-x: auto;
+            border: 2px solid var(--primary);
+            border-radius: 24px;
+            background-color: var(--card-bg);
+        }
+
+        .q-txt-nwkz {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            font-size: 0.95rem;
+        }
+
+        .q-txt-nwkz th, .q-txt-nwkz td {
+            padding: 16px;
+            border-bottom: 1px solid var(--primary);
+        }
+
+        .q-txt-nwkz th {
+            background-color: var(--primary);
+            color: var(--secondary);
+            font-family: var(--font-mono);
+        }
+
+        .q-txt-nwkz tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* FAQ Section */
+        .n-txt-zvbo-section {
+            border-top: 2px dashed var(--primary);
+            padding-top: 60px;
+            margin-bottom: 80px;
+        }
+
+        .n-txt-zvbo-item {
+            margin-bottom: 32px;
+            background-color: var(--card-bg);
+            border: 1px solid var(--primary);
+            border-radius: 24px;
+            padding: 24px;
+        }
+
+        .n-txt-zvbo-question {
+            font-family: var(--font-serif);
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin-bottom: 12px;
+            color: var(--primary);
+        }
+
+        .n-txt-zvbo-answer {
+            font-size: 0.95rem;
+            color: #444;
+            line-height: 1.6;
+        }
+
+        /* Floating Dot Navigation (Retro Neo-Brut indicator) */
+        .q-body-acjv-nav {
+            position: fixed;
+            bottom: 32px;
+            right: 32px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            z-index: 100;
+            background: var(--card-bg);
+            padding: 12px;
+            border: 2px solid var(--primary);
+            border-radius: 24px;
+        }
+
+        .q-body-acjv-item {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #ccc;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: 1px solid var(--primary);
+        }
+
+        .q-body-acjv-item.active {
+            background-color: var(--accent);
+            transform: scale(1.3);
+        }
+
+        /* Author Bio Section */
+        .k-body-wpi2-bio {
+            background-color: var(--primary);
+            color: var(--secondary);
+            border-radius: 24px;
+            padding: 40px;
+            margin-bottom: 80px;
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        .k-body-wpi2-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: var(--accent);
+            border: 3px solid var(--secondary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-mono);
+            font-size: 1.8rem;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        .k-body-wpi2-info {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .k-body-wpi2-name {
+            font-family: var(--font-serif);
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .k-body-wpi2-text {
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+
+        /* Footer */
+        .t-main-czat {
+            border-top: 1px solid var(--primary);
+            padding-top: 32px;
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: #666;
+            text-align: center;
+        }
+    </style>
   <meta property="og:title" content="이어폰 단자 규격 정리 — 핵심 요약 및 기술적 판단 기준">
   <meta property="og:description" content="3.5mm, 2.5mm, 4.4mm 단자의 전기적 특성과 물리적 구조를 분석합니다. 밸런스드 출력이 필요한 이유와 젠더 사용 시 발생하는 물리적 임피던스 변화를 데이터 중심으로 설명합니다.">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary">
 </head>
 <body>
-
+  <div class="container">
+    <header class="v-ico-6lwe" id="section-top">
+        <div class="m-main-qhxr-wrap">
+            <h1 class="r-nav-36on-title">이어폰 단자 규격 정리</h1>
+        </div>
+        <p class="r-nav-36on-definition">3.5mm · 2.5mm · 4.4mm 물리적 구조와 신호 체계의 과학적 비교 분석</p>
+        
+        <div class="n-list-5vgq-row">
+            <span>작성일: 2024.10.24</span>
+            <span>분류: 음향 하드웨어 분석</span>
+            <span>도메인: audio.localscoop.online</span>
+        </div>
+    </header>
+    <main>
 <nav class="r-nav-36on-">
     <a href="/">홈</a>
     <a href="/types">규격 상세</a>
@@ -49,6 +432,7 @@
     </section>
 
 </main>
-
+    </main>
+  </div>
 </body>
 </html>

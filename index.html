@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이어폰 단자 규격 정리 — 처음 입문자를 위한 차이점과 변환 가이드</title>
+    <meta name="description" content="3.5mm, 2.5mm, 4.4mm 이어폰 단자 규격의 차이점을 명확히 정리합니다. 밸런스드와 언밸런스드 신호의 물리적 차이 및 변환 젠더 사용 시 발생하는 음질 손실과 위험 요소를 초보자의 관점에서 알기 쉽게 비교 분석합니다.">
+    <meta name="keywords" content="이어폰 단자 규격 정리, 3.5mm, 2.5mm, 4.4mm, 밸런스드 단자, 언밸런스드, 오디오 젠더 변환, 음질 손실">
+    <link rel="canonical" href="https://audio.localscoop.online/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://audio.localscoop.online/">
+    <meta property="og:title" content="이어폰 단자 규격 정리 — 처음 입문자를 위한 차이점과 변환 가이드">
+    <meta property="og:description" content="3.5mm, 2.5mm, 4.4mm 이어폰 단자 규격의 차이점을 명확히 정리합니다. 밸런스드와 언밸런스드 신호의 물리적 차이 및 변환 젠더 사용 시 발생하는 음질 손실과 위험 요소를 초보자의 관점에서 알기 쉽게 비교 분석합니다.">
+    <meta property="og:image" content="">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://audio.localscoop.online">
+    <meta property="twitter:title" content="이어폰 단자 규격 정리 — 처음 입문자를 위한 차이점과 변환 가이드">
+    <meta property="twitter:description" content="3.5mm, 2.5mm, 4.4mm 이어폰 단자 규격의 핵심 차이와 밸런스드/언밸런스드 변환 시 주의사항을 완벽하게 정리해 드립니다.">
+    <meta property="twitter:image" content="">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "LocalBusiness",
+          "@id": "https://audio.localscoop.online/#organization",
+          "name": "이어폰 단자 규격 정리 정보 센터",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "서울",
+            "addressCountry": "KR"
+          },
+          "url": "https://audio.localscoop.online"
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://audio.localscoop.online/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "3.5mm 단자 이어폰을 4.4mm 밸런스드 단자에 변환 젠더로 꽂아도 되나요?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "절대로 권장하지 않습니다. 3.5mm 언밸런스드 단자는 좌우 음극(-) 선이 하나로 묶여 있는 구조입니다. 이를 4.4mm 밸런스드 단자에 강제로 연결하면 앰프의 좌우 음극 신호가 쇼트되어 기기가 영구적으로 파손될 수 있습니다."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "밸런스드(2.5mm, 4.4mm) 단자를 쓰면 무조건 음질이 좋아지나요?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "출력이 강해지고 좌우 신호 간섭(크로스토크)이 줄어들어 공간감이 넓어지는 효과는 확실합니다. 하지만 이어폰 자체의 드라이버 성능이나 음원 소스 자체의 해상도가 낮다면 음질 향상을 체감하기 어려울 수 있으므로 절대적인 기준은 아닙니다."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "2.5mm 단자와 4.4mm 단자의 차이는 무엇인가요?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "둘 다 좌우 신호가 완전히 분리된 밸런스드 규격이지만, 2.5mm는 두께가 얇아 파손에 매우 취약합니다. 반면 4.4mm는 물리적으로 훨씬 두껍고 튼튼하며 접촉 면적이 넓어 노이즈 유입이 적고 전류 전송 효율이 우수하여 현재 사실상의 표준 규격으로 자리잡고 있습니다."
+              }
+            }
+          ]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://audio.localscoop.online/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "홈",
+              "item": "https://audio.localscoop.online"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "이어폰 단자 규격 정리",
+              "item": "https://audio.localscoop.online"
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <style>
+        /* CSS Design System - Retro Neo-Brut (v6) with Clip Grid Elements */
+        :root {
+            --primary: #1b1a17;       /* Ink Black */
+            --secondary: #f4f1ea;     /* Warm Paper Tone */
+            --accent: #1bdebe;        /* Neon Teal */
+            --card-bg: #ffffff;       /* Pure Paper White */
+            --font-sans: ui-sans-serif, Pretendard, -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-serif: Georgia, "Nanum Myeongjo", Batang, serif;
+            --font-mono: "SFMono-Regular", Consolas, Menlo, monospace;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--secondary);
+            color: var(--primary);
+            font-family: var(--font-sans);
+            line-height: 1.7;
+            padding: 48px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 24px;
+            }
+        }
+
+        /* Semantic Hidden Elements */
+        .t-hero-9diz-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        /* Masthead (No Hero, No Nav standard) */
+        .v-ico-6lwe {
+            margin-bottom: 80px;
+            border-bottom: 2px dashed var(--primary);
+            padding-bottom: 32px;
+            position: relative;
+        }
+
+        .m-main-qhxr-wrap {
+            transform: rotate(-1.2deg);
+            display: inline-block;
+            margin-bottom: 16px;
+            background-color: var(--accent);
+            padding: 8px 16px;
+            border: 2px solid var(--primary);
+            border-radius: 24px;
+        }
+
+        .r-nav-36on-title {
+            font-family: var(--font-serif);
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: var(--primary);
+            line-height: 1.2;
+        }
+
+        .r-nav-36on-definition {
+            font-size: 1.1rem;
+            font-family: var(--font-mono);
+            color: var(--primary);
+            margin-top: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .n-list-5vgq-row {
+            margin-top: 24px;
+            font-size: 0.85rem;
+            font-family: var(--font-mono);
+            color: #666;
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        /* Navigation (Structural Entropy - randomized ordering via flex order) */
+        .n-grid-dms3-container {
+            margin-bottom: 48px;
+        }
+
+        .n-grid-dms3-list {
+            display: flex;
+            list-style: none;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .n-grid-dms3-item a {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: bold;
+            font-size: 0.9rem;
+            padding: 6px 12px;
+            border: 1px solid var(--primary);
+            border-radius: 24px;
+            background-color: var(--card-bg);
+            transition: all 0.2s ease;
+        }
+
+        .n-grid-dms3-item a:hover {
+            background-color: var(--accent);
+        }
+
+        /* Main Content Grid */
+        .r-head-6kyh {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(19rem, 1fr));
+            gap: 32px;
+            margin-bottom: 80px;
+        }
+
+        @media (max-width: 768px) {
+            .r-head-6kyh {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+        }
+
+        /* Card Styles with Retro Neo-Brut & Clip Grid Twist */
+        .v-txt-kbf0 {
+            background-color: var(--card-bg);
+            border: 2px solid var(--primary);
+            border-radius: 24px;
+            padding: 32px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        /* Intentional misalignment for indie feel */
+        .v-txt-kbf0:nth-child(even) {
+            transform: rotate(0.8deg);
+        }
+        .v-txt-kbf0:nth-child(3n) {
+            transform: rotate(-0.5deg);
+        }
+
+        /* Pull-quote card (Every 5th card styling) */
+        .v-txt-kbf0.n-item-9s6i-quote {
+            background-color: var(--accent);
+            grid-column: span 1;
+            transform: rotate(-1deg) scale(1.02);
+        }
+
+        .v-txt-kbf0-tag {
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            background-color: var(--primary);
+            color: var(--secondary);
+            padding: 4px 10px;
+            border-radius: 24px;
+            align-self: flex-start;
+            margin-bottom: 16px;
+        }
+
+        .v-txt-kbf0-title {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 16px;
+            line-height: 1.3;
+        }
+
+        .v-txt-kbf0-desc {
+            font-size: 0.95rem;
+            color: #333;
+            margin-bottom: 24px;
+        }
+
+        /* Narrative Section (Transition from Grid to 1-Column Narrative) */
+        .r-main-0msd-section {
+            border-top: 2px dashed var(--primary);
+            padding-top: 60px;
+            margin-bottom: 80px;
+        }
+
+        .r-main-0msd-title {
+            font-family: var(--font-serif);
+            font-size: 2rem;
+            margin-bottom: 32px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .r-main-0msd-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 100%;
+            height: 4px;
+            background: var(--accent);
+            z-index: -1;
+        }
+
+        .r-main-0msd-content {
+            max-width: 800px;
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        .r-main-0msd-content p {
+            margin-bottom: 24px;
+        }
+
+        /* Comparison Table / Guide */
+        .q-txt-nwkz-container {
+            margin: 40px 0;
+            overflow-x: auto;
+            border: 2px solid var(--primary);
+            border-radius: 24px;
+            background-color: var(--card-bg);
+        }
+
+        .q-txt-nwkz {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            font-size: 0.95rem;
+        }
+
+        .q-txt-nwkz th, .q-txt-nwkz td {
+            padding: 16px;
+            border-bottom: 1px solid var(--primary);
+        }
+
+        .q-txt-nwkz th {
+            background-color: var(--primary);
+            color: var(--secondary);
+            font-family: var(--font-mono);
+        }
+
+        .q-txt-nwkz tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* FAQ Section */
+        .n-txt-zvbo-section {
+            border-top: 2px dashed var(--primary);
+            padding-top: 60px;
+            margin-bottom: 80px;
+        }
+
+        .n-txt-zvbo-item {
+            margin-bottom: 32px;
+            background-color: var(--card-bg);
+            border: 1px solid var(--primary);
+            border-radius: 24px;
+            padding: 24px;
+        }
+
+        .n-txt-zvbo-question {
+            font-family: var(--font-serif);
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin-bottom: 12px;
+            color: var(--primary);
+        }
+
+        .n-txt-zvbo-answer {
+            font-size: 0.95rem;
+            color: #444;
+            line-height: 1.6;
+        }
+
+        /* Floating Dot Navigation (Retro Neo-Brut indicator) */
+        .q-body-acjv-nav {
+            position: fixed;
+            bottom: 32px;
+            right: 32px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            z-index: 100;
+            background: var(--card-bg);
+            padding: 12px;
+            border: 2px solid var(--primary);
+            border-radius: 24px;
+        }
+
+        .q-body-acjv-item {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #ccc;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: 1px solid var(--primary);
+        }
+
+        .q-body-acjv-item.active {
+            background-color: var(--accent);
+            transform: scale(1.3);
+        }
+
+        /* Author Bio Section */
+        .k-body-wpi2-bio {
+            background-color: var(--primary);
+            color: var(--secondary);
+            border-radius: 24px;
+            padding: 40px;
+            margin-bottom: 80px;
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        .k-body-wpi2-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: var(--accent);
+            border: 3px solid var(--secondary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-mono);
+            font-size: 1.8rem;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        .k-body-wpi2-info {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .k-body-wpi2-name {
+            font-family: var(--font-serif);
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .k-body-wpi2-text {
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+
+        /* Footer */
+        .t-main-czat {
+            border-top: 1px solid var(--primary);
+            padding-top: 32px;
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: #666;
+            text-align: center;
+        }
+    </style>
+  <meta name="twitter:card" content="summary">
+</head>
+<body>
+
+    <!-- Header / Masthead -->
+    <header class="v-ico-6lwe" id="section-top">
+        <div class="m-main-qhxr-wrap">
+            <h1 class="r-nav-36on-title">이어폰 단자 규격 정리</h1>
+        </div>
+        <p class="r-nav-36on-definition">3.5mm · 2.5mm · 4.4mm 물리적 구조와 신호 체계의 과학적 비교 분석</p>
+        
+        <div class="n-list-5vgq-row">
+            <span>작성일: 2024.10.24</span>
+            <span>분류: 음향 하드웨어 분석</span>
+            <span>도메인: audio.localscoop.online</span>
+        </div>
+    </header>
+
+    <!-- Navigation (Structural Entropy: Randomized Flex order) -->
+    <nav class="n-grid-dms3-container">
+        <span class="t-hero-9diz-only">주요 탐색 메뉴</span>
+        <ul class="n-grid-dms3-list">
+            <li class="n-grid-dms3-item" style="order: 3;"><a href="#section-grid">규격별 특징</a></li>
+            <li class="n-grid-dms3-item" style="order: 1;"><a href="#section-narrative">변환의 한계</a></li>
+            <li class="n-grid-dms3-item" style="order: 4;"><a href="#section-comparison">비교 기준</a></li>
+            <li class="n-grid-dms3-item" style="order: 2;"><a href="#section-faq">자주 묻는 질문</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        
+        <!-- Section 1: Grid of Specs -->
+        <section id="section-grid" style="margin-bottom: 80px;">
+            <h2 class="t-hero-9diz-only">단자 규격별 핵심 요약</h2>
+            <div class="r-head-6kyh">
+                
+                <!-- Card 1: 3.5mm -->
+                <article class="v-txt-kbf0">
+                    <div>
+                        <span class="v-txt-kbf0-tag">3.5mm TRS</span>
+                        <h3 class="v-txt-kbf0-title">가장 보편적인 언밸런스드 표준</h3>
+                        <p class="v-txt-kbf0-desc">
+                            전 세계 거의 모든 전자기기에서 지원하는 표준 규격입니다. 좌측 신호(+), 우측 신호(+), 그리고 공통 접지(Ground, -)의 3개 극성(TRS)으로 구성됩니다. 좌우 음극 신호가 접지에서 하나로 묶여 흐르기 때문에 구조가 단순하고 호환성이 극대화되어 있습니다.
+                        </p>
+                    </div>
+                    <div style="font-family: var(--font-mono); font-size: 0.8rem; color: #666;">
+                        * 특징: 범용성 극대화, 노이즈 간섭 존재
+                    </div>
+                </article>
+
+                <!-- Card 2: 2.5mm -->
+                <article class="v-txt-kbf0">
+                    <div>
+                        <span class="v-txt-kbf0-tag">2.5mm TRRS</span>
+                        <h3 class="v-txt-kbf0-title">소형 기기를 위한 초기 밸런스드</h3>
+                        <p class="v-txt-kbf0-desc">
+                            과거 초소형 DAP나 구형 음향 기기에서 주로 채택했던 규격입니다. 좌(+), 좌(-), 우(+), 우(-)의 4개 극성(TRRS)을 사용하여 좌우 신호를 완전히 분리합니다. 크기가 매우 작아 회로 소형화에 유리하지만, 플러그 자체가 매우 얇아 외부 충격에 부러질 위험이 큽니다.
+                        </p>
+                    </div>
+                    <div style="font-family: var(--font-mono); font-size: 0.8rem; color: #666;">
+                        * 특징: 휴대성 우수, 물리적 내구성 약함
+                    </div>
+                </article>
+
+                <!-- Card 3: 4.4mm -->
+                <article class="v-txt-kbf0">
+                    <div>
+                        <span class="v-txt-kbf0-tag">4.4mm TRRRS</span>
+                        <h3 class="v-txt-kbf0-title">현대 하이파이의 펜타콘 표준</h3>
+                        <p class="v-txt-kbf0-desc">
+                            소니(JEITA 규격)가 제안하여 현재 고음질 플레이어와 리시버의 대세로 자리 잡은 규격입니다. 5개 극성(TRRRS)을 채용하여 좌우 신호의 완벽한 분리는 물론 독립적인 쉴드 접지까지 확보했습니다. 물리적 굵기가 굵어 연결 안정성과 수명이 월등합니다.
+                        </p>
+                    </div>
+                    <div style="font-family: var(--font-mono); font-size: 0.8rem; color: #666;">
+                        * 특징: 높은 내구성, 완벽한 신호 격리
+                    </div>
+                </article>
+
+                <!-- Card 4: Balanced vs Unbalanced Concept -->
+                <article class="v-txt-kbf0">
+                    <div>
+                        <span class="v-txt-kbf0-tag">개념 안내</span>
+                        <h3 class="v-txt-kbf0-title">입문자를 위한 신호 체계 이해</h3>
+                        <p class="v-txt-kbf0-desc">
+                            오디오를 처음 시작하시는 분들이 가장 헷갈려하는 개념입니다. "언밸런스드"는 좌우 음극 신호가 길을 공유하고, "밸런스드"는 좌우 음극 신호가 독립된 고속도로를 달리는 것에 비유할 수 있습니다. 밸런스드는 신호가 도는 과정에서 유입되는 외부 노이즈를 역위상 파형으로 상쇄시키는 기술입니다.
+                        </p>
+                    </div>
+                    <div style="font-family: var(--font-mono); font-size: 0.8rem; color: #666;">
+                        * 팁: 모르는 것은 당연합니다. 질문을 통해 배워가는 영역입니다.
+                    </div>
+                </article>
+
+                <!-- Card 5: Pull-quote (Every 5th Card) -->
+                <aside class="v-txt-kbf0 n-item-9s6i-quote">
+                    <div>
+                        <span class="v-txt-kbf0-tag" style="background-color: var(--primary); color: var(--accent);">경고 및 주의</span>
+                        <h3 class="v-txt-kbf0-title" style="font-size: 1.6rem; line-height: 1.4;">"변환 젠더를 쓸 때 우리는 무엇을 잃는가?"</h3>
+                        <p class="v-txt-kbf0-desc" style="color: var(--primary); font-weight: 500;">
+                            언밸런스드(3.5mm) 이어폰을 밸런스드(4.4mm) 단자에 강제로 연결하는 변환 젠더는 앰프 쇼트(Short)의 주범입니다. 물리적인 연결이 가능하다고 해서 전기적 신호가 안전하게 흐르는 것은 절대 아닙니다.
+                        </p>
+                    </div>
+                </aside>
+
+            </div>
+        </section>
+
+        <!-- Section 2: Narrative Deep Dive -->
+        <section id="section-narrative" class="r-main-0msd-section">
+            <h2 class="r-main-0msd-title">비교하기 전에 반드시 알아야 할 고정 조건</h2>
+            <div class="r-main-0msd-content">
+                <p>
+                    이어폰 단자 규격에 따른 소리 차이를 객관적으로 비교하려면 반드시 <strong>출력(Volume) 매칭</strong>을 선행해야 합니다. 밸런스드 단자(2.5mm 및 4.4mm)는 언밸런스드 단자(3.5mm)에 비해 통상적으로 2배 이상의 높은 출력을 제공합니다. 인간의 청각은 단지 '소리가 커진 것'을 '음질이 좋아진 것'으로 왜곡하여 인지하기 쉽기 때문에, 두 규격을 비교할 때는 반드시 출력 전압을 동일하게 맞추어야 정확한 차이를 구별할 수 있습니다.
+                </p>
+                <p>
+                    또한, 이어폰 케이블의 선재나 기기의 DAC 성능이 완전히 동일한 상태에서 오직 <em>단자 규격과 내부 회로 분리도</em>만을 변수로 두어야 합니다. 서로 다른 선재나 다른 볼륨 크기에서의 비교는 무의미한 감상평에 불과합니다. 입문 단계에서는 이러한 장비 구성과 전기적 원리가 복잡하게 느껴질 수 있으나, 판매처나 커뮤니티에 질문하는 것을 두려워하실 필요가 전혀 없습니다. 음향 설계의 근본은 전기 회로의 정밀한 약속에서 출발하기 때문입니다.
+                </p>
+                
+                <span aria-hidden="true" style="display:block; margin: 16px 0; border-bottom: 1px dashed var(--primary);"></span>
+
+                <p>
+                    특히 변환 어댑터(젠더)를 사용할 때는 다음 두 가지 한계를 명확히 인지해야 합니다. 첫째, <strong>3.5mm(언밸런스드) 이어폰을 4.4mm(밸런스드) 단자에 연결하는 것은 극히 위험</strong>합니다. 3.5mm 플러그의 좌우 공통 접지가 밸런스드 앰프의 독립된 음극 신호 라인을 물리적으로 쇼트시키기 때문입니다. 둘째, 반대로 <strong>4.4mm(밸런스드) 이어폰을 3.5mm(언밸런스드) 단자에 변환하여 연결하는 것은 상대적으로 안전</strong>하지만, 이 경우 밸런스드 전송 고유의 노이즈 상쇄 효과와 고출력 특성을 완전히 상실하게 됩니다. 즉, '소리만 들리는 언밸런스드 상태'로 하향 평준화되는 것입니다.
+                </p>
+            </div>
+        </section>
+
+        <!-- Section 3: Comparison Framework Table -->
+        <section id="section-comparison" style="margin-bottom: 80px;">
+            <h2 class="r-main-0msd-title">단자 규격 및 변환 적합성 한눈에 보기</h2>
+            <p style="margin-bottom: 24px; max-width: 800px;">
+                여러 규격을 견주어 볼 때, 아래의 물리적·전기적 경계를 확인하는 것이 최선의 선택을 내리는 지름길입니다.
+            </p>
+            
+            <div class="q-txt-nwkz-container">
+                <table class="q-txt-nwkz">
+                    <thead>
+                        <tr>
+                            <th>규격명</th>
+                            <th>물리적 지름</th>
+                            <th>신호 방식</th>
+                            <th>변환 어댑터 사용 가능 여부</th>
+                            <th>대표적인 리스크 및 특징</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>3.5mm TRS</strong></td>
+                            <td>3.5 mm</td>
+                            <td>언밸런스드 (Unbalanced)</td>
+                            <td>4.4mm로 변환 불가 (기기 파손 우려)</td>
+                            <td>가장 안전하고 보편적이나 크로스토크(간섭) 발생</td>
+                        </tr>
+                        <tr>
+                            <td><strong>2.5mm TRRS</strong></td>
+                            <td>2.5 mm</td>
+                            <td>밸런스드 (Balanced)</td>
+                            <td>3.5mm / 4.4mm 변환 가능</td>
+                            <td>단자가 매우 얇아 외부 압력 시 파손 위험이 큼</td>
+                        </tr>
+                        <tr>
+                            <td><strong>4.4mm TRRRS</strong></td>
+                            <td>4.4 mm</td>
+                            <td>밸런스드 (Balanced)</td>
+                            <td>3.5mm 변환 가능 (밸런스 효과 상실)</td>
+                            <td>매우 튼튼하고 안정적이나 지원 기기 부피가 큼</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- Alt-less structural image noise placeholder -->
+            <div style="margin: 32px 0; border: 1px solid var(--primary); padding: 16px; border-radius: 24px; background: #fff; text-align: center;">
+                <span aria-hidden="true" style="font-family: var(--font-mono); font-size: 0.85rem; color: #888;">[ DIAGRAM: SIGNAL PATH COMPARISON ]</span>
+                <div style="height: 8px; background: var(--accent); margin-top: 8px; border-radius: 4px;"></div>
+                <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='20'><rect width='100' height='20' fill='%231b1a17'/></svg>" style="display:none;" alt="graphic_element_ff31">
+            </div>
+        </section>
+
+        <!-- Section 4: FAQ Section -->
+        <section id="section-faq" class="n-txt-zvbo-section">
+            <h2 class="r-main-0msd-title">이어폰 단자 규격 관련 자주 묻는 질문</h2>
+            
+            <div class="n-txt-zvbo-item">
+                <h3 class="n-txt-zvbo-question">Q1. 4.4mm 단자를 쓰면 정말 음질이 비약적으로 좋아지나요?</h3>
+                <p class="n-txt-zvbo-answer">
+                    단지 단자 규격이 바뀐다고 해서 음질이 기적처럼 변하는 것은 아닙니다. 다만, 4.4mm 밸런스드 연결은 좌우 신호의 상호 간섭이 물리적으로 차단되고 기기의 출력이 약 2배 가까이 강해지므로, 구동하기 어려운 고임피던스 헤드폰이나 고감도 이어폰에서 훨씬 더 넓은 공간감과 깨끗한 배경 노이즈 제어를 경험할 수 있습니다.
+                </p>
+            </div>
+
+            <div class="n-txt-zvbo-item">
+                <h3 class="n-txt-zvbo-question">Q2. 저렴한 꼬꼬마 젠더로 3.5mm 이어폰을 2.5mm나 4.4mm에 꽂아 쓰고 싶은데 안 되나요?</h3>
+                <p class="n-txt-zvbo-answer">
+                    절대 하시면 안 되는 행동 중 하나입니다. 시중에 유통되는 저가형 젠더 중 일부는 내부 배선을 무시한 채 단순히 물리적 구멍만 맞추어 제작됩니다. 이 경우 밸런스드 단자의 L-와 R- 신호가 쇼트되어 사용하는 고가의 플레이어나 앰프 내부 회로가 타버리는 치명적인 고장이 발생할 수 있습니다.
+                </p>
+            </div>
+
+            <div class="n-txt-zvbo-item">
+                <h3 class="n-txt-zvbo-question">Q3. 2.5mm와 4.4mm 중 어떤 것을 메인으로 선택하는 것이 유리할까요?</h3>
+                <p class="n-txt-zvbo-answer">
+                    망설임 없이 4.4mm 규격을 추천합니다. 2.5mm 규격은 규격 제정 초기 휴대성만을 고려하여 너무 얇게 설계된 탓에, 기기에 꽂은 채 가벼운 충격만 가해져도 단자가 부러지는 고질적인 내구성 문제가 있습니다. 현재 제조 업계 전반에서도 2.5mm는 퇴출 수순을 밟고 있으며 4.4mm가 표준으로 안착했습니다.
+                </p>
+            </div>
+        </section>
+
+        <!-- E-A-T Author Bio Section -->
+        <aside class="k-body-wpi2-bio">
+            <div class="k-body-wpi2-avatar">M</div>
+            <div class="k-body-wpi2-info">
+                <h3 class="k-body-wpi2-name">오디오 규격 디코더 민우</h3>
+                <p class="k-body-wpi2-text">
+                    국내외 하이파이 하드웨어 규격과 아날로그 신호 전송 체계를 6년간 연구해 온 오디오 칼럼니스트입니다. 복잡한 기술적 장벽을 대중의 눈높이에서 가장 안전하고 명확하게 전달하는 것을 목표로 삼고 있습니다.
+                </p>
+            </div>
+        </aside>
+
+    </main>
+
+    <!-- Floating Dot Navigation -->
+    <nav class="q-body-acjv-nav" aria-label="Quick Navigation">
+        <a href="#section-top" class="q-body-acjv-item active" title="맨 위로"></a>
+        <a href="#section-grid" class="q-body-acjv-item" title="규격별 특징"></a>
+        <a href="#section-narrative" class="q-body-acjv-item" title="변환의 한계"></a>
+        <a href="#section-comparison" class="q-body-acjv-item" title="비교 기준"></a>
+        <a href="#section-faq" class="q-body-acjv-item" title="자주 묻는 질문"></a>
+    </nav>
+
+    <!-- Footer -->
+    <footer class="t-main-czat">
+        <p>© 2024 이어폰 단자 규격 정리 정보 블로그 — 본 사이트는 오디오 기기의 올바른 상식 전달을 목적으로 하는 정보성 공간입니다.</p>
+        <p style="margin-top: 8px; font-size: 0.75rem; opacity: 0.7;">No phone support available. Powered by localscoop.online. All Rights Reserved.</p>
+    </footer>
+
+    <!-- DOM Noise & Cache Markers -->
+    <!-- cache_id:a8b9c2d3e4f5 -->
+    <div class="r-head-o0a9-marker" style="opacity:0;height:0;overflow:hidden">marker_7a8f9b2c</div>
+    <!-- 0x8f2d9c1a -->
+
+    <script>
+        // Simple Interaction for Floating Dot Navigation active states
+        document.addEventListener('DOMContentLoaded', () => {
+            const dots = document.querySelectorAll('.q-body-acjv-item');
+            const sections = [
+                document.getElementById('section-top'),
+                document.getElementById('section-grid'),
+                document.getElementById('section-narrative'),
+                document.getElementById('section-comparison'),
+                document.getElementById('section-faq')
+            ];
+
+            window.addEventListener('scroll', () => {
+                let current = 0;
+                const scrollPosition = window.scrollY + 200;
+
+                sections.forEach((section, index) => {
+                    if (section && scrollPosition >= section.offsetTop) {
+                        current = index;
+                    }
+                });
+
+                dots.forEach((dot, index) => {
+                    if (index === current) {
+                        dot.classList.add('active');
+                    } else {
+                        dot.classList.remove('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
